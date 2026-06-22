@@ -1,0 +1,36 @@
+@font-face {
+    font-family: chiku;
+    src: url(./NeueMachina-Regular.woff2);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,body{
+    height: 100%;
+    width: 100%;
+}
+
+h3{
+    color: rgb(100, 233, 22);
+    background-color: #fff;
+    font-size: 50px;
+    font-family: chiku;
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+#main{
+    color:rgb(28, 174, 231)
+}
+
+.chiku{
+    background-color: rgb(230, 129, 14);
+    color: white;
+    
+}
+

@@ -1,0 +1,35 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,body{
+    height: 100%;
+    width: 100%;
+}
+
+.box{
+    height:200px;
+    width: 200px;
+    background-color: rgb(10, 94, 250);
+    margin-left: 50px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    margin-right: 50px;
+}
+
+h1{
+    color:white;
+    padding-left: 50px;
+    padding-top: 50px;
+}
+
+.container{
+    height: 400px;
+    width: 400px;
+    background: radial-gradient(rgb(10, 94, 250), rgb(0, 0, 0));
+    
+
+}
+

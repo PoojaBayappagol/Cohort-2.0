@@ -1,0 +1,80 @@
+@font-face {
+    font-family: always;
+    src: url(./Merchad.otf);
+}
+@font-face {
+    font-family: adventure;
+    src: url(./The\ Rollingstar\ OTF.otf);
+}
+
+@font-face {
+    font-family: say;
+    src: url(./Morrison-Regular.otf);
+}
+
+@font-face {
+    font-family: button;
+    src: url(./BladesofFortunes-PersonalUse.ttf);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,body{
+    height: 100%;
+    width: 100%;
+}
+
+.container{
+    height: 100%;
+    width: 100%;
+    background-image: url(./roma-kaiuk-pRH7i8BTPTQ-unsplash.jpg);
+    background-size: cover;
+    background-position: center;
+    
+    
+    
+}
+.content{
+    color: white;
+    text-align: center;
+    padding-top: 100px;
+
+}
+
+h2{
+    font-family: always;
+    font-weight: 300;
+    font-size: 90px;
+    
+}
+
+h4{
+    font-family: say;
+    font-size: 30px;
+    font-weight: 300;
+    
+}
+
+h1{
+    font-family: button;
+    font-weight: 600;
+    font-size: 90px;
+    
+}
+
+button{
+    height: 50px;
+    width: 150px;
+    background-color: #395117;
+    color: white;
+    border: 2px solid white;
+    font-size: 20px;
+    font-family: button;
+    margin-top: 20px;
+    font-weight: 500;
+    border-radius: 25px;
+}
