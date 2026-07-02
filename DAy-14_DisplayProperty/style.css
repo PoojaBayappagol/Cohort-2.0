@@ -1,0 +1,148 @@
+@font-face {
+    font-family:textfont ;
+    src: url(./sf-pro-text_semibold.woff2);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,body{
+    height: 100%;
+    width: 100%;
+    font-family: textfont;
+}  
+
+.container{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+
+#nav{
+    height: 60px;
+    width: 100%;
+    background-color: rgb(59, 56, 56);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    
+}
+
+#nav h4{
+    color: rgb(247, 243, 243);
+    font-weight: 100;
+}
+
+#center{
+    height: 90%;
+    width: 100%;
+    background-color: rgb(15, 15, 15);
+    text-align: center;
+    justify-content: center;
+    padding: 40px;
+    background-size: cover;
+    background-position: center;
+
+    background-image: url(https://www.apple.com/v/home/ci/images/heroes/iphone-17-pro/hero_iphone_17_pro__bknyzxfk2agi_large.jpg);
+}
+
+#center h1{
+    color: rgb(250, 249, 249);
+    font-size: 50px;
+    font-weight: 545;
+
+}
+#center h5{
+    color: rgb(250, 249, 249);
+    font-size: 27px;
+    font-weight: 200;
+
+}
+
+#links{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    padding: 20px;
+}
+
+button{
+    background-color: #4169e1;
+    color: rgb(247, 245, 245);
+    padding: 12px 20px;
+    border-radius: 50px;
+    border: none;
+    font-weight: 300;
+    font-size: 18px;
+}
+
+#links > #buy-button{
+    background-color:transparent;
+    border: 1px  #4169e1 solid;
+    color:  #4169e1;
+
+}
+
+
+#main2{
+    height: 100%;
+    width: 100%;
+    background-color: rgb(255, 254, 254);
+    text-align: center;
+    justify-content: center;
+    padding: 40px;
+    background-size: 100% 100%; 
+    background-position: top;
+    background-image: url(https://www.apple.com/v/home/images/iphone-17/a/hero_iphone_17__ekga3xh1n5aq_small_2x.jpg);
+
+    
+}
+
+#center2 h1{
+    color: rgb(27, 27, 27);
+    font-size: 50px;
+    font-weight: 700;
+
+}
+
+#main2 #center2 h5{
+    color: rgb(36, 35, 35);
+    font-size: 28px;
+    font-weight: 100;
+
+}
+
+
+
+#main3{
+    height: 100%;
+    width: 100%;
+    background-color: rgb(255, 254, 254);
+    text-align: center;
+    justify-content: center;
+    padding: 40px;
+     background-size: 100% 100%; 
+     background-position: center;
+    background-image:url(https://www.apple.com/v/home/images/macbook-air-m5/a/hero_macbook_air_m5__eb1idggd120y_small_2x.jpg);
+    
+}
+
+#center3 h1{
+    color: rgb(27, 27, 27);
+    font-size: 50px;
+    font-weight: 900;
+
+}
+
+#main3 #center3 h5{
+    color: rgb(34, 34, 34);
+    font-size: 23px;
+    font-weight: 100;
+
+}

@@ -1,0 +1,41 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,body{
+    height: 100%;
+    width: 100%;
+}
+
+
+.main{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    padding: 20px;
+    gap: 10px;
+    /* flex-wrap: nowrap; */
+    flex-wrap: wrap;
+
+}
+
+#child1{
+    height: 200px;
+    width: 200px;
+    background-color: black;
+    /* flex-shrink: 0; */
+}
+
+#child2{
+    height: 200px;
+    width: 200px;
+    background-color: black;
+}
+
+#child3{
+    height: 200px;
+    width: 200px;
+    background-color: black;
+}
