@@ -10,9 +10,10 @@ html,body{
     padding: 10px;
     background-color: rgb(139, 139, 138);
 }
+
 .main{
     display: flex;
-    gap: 10px;
+    gap: 14px;
     flex-wrap: wrap;
 
 }
@@ -28,6 +29,7 @@ html,body{
     justify-content: center;
     flex-direction: column;
     gap: 10px;
+    transition: transform 0.3s ease;
 }
 
 .card img{
@@ -46,4 +48,9 @@ html,body{
     font-weight: 500;
     background-color: rgb(98, 144, 170);
     
+}
+
+
+.card:hover {
+  transform: scale(1.05);
 }
