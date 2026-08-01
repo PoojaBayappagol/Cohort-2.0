@@ -1,0 +1,45 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html,body{
+    height: 100%;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+
+main{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    background-color: black;
+}
+.card{
+    height: 80px;
+    width: 70%;
+    background-color: rgb(112, 112, 112);
+    border-radius: 20px;
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    color: white;
+
+}
+
+button{
+    height: 35px;
+    width: 140px;
+    border: 2px solid black;
+    border-radius: 10px;
+    font-weight: 600;
+}
+
+button:active{
+    scale: 0.96;
+}
