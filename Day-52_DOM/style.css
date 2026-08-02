@@ -1,0 +1,27 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+
+html,body{
+    height: 100%;
+    width: 100%;
+    box-sizing: border-box;
+    background:linear-gradient(to left ,red,blue,orange,yellow,green,rgb(250, 88, 115));
+
+}
+
+:root{
+    --x:100px;
+    --y:100px;
+
+}
+.box{
+    height: 100%;
+    width: 100%;
+    background:radial-gradient(150px at var(--x) var(--y),transparent,black);
+}
+
+
+

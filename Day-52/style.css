@@ -1,0 +1,41 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html,body{
+    height: 100%;
+    width: 100%;
+    
+
+}
+
+.main{
+    height: 100%;
+    width: 100%;
+    background-color: orange;
+}
+
+
+:root{
+    --x:100px;
+    --y:100px;
+}
+.box{
+    height: 100%;
+    width: 100%;
+    background: radial-gradient(150px at var(--x) var(--y),transparent,black);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    /* z-index: 9; */
+    
+}
+
+.box img{
+    height: 45%;
+    width: 100%;
+
+}
+
