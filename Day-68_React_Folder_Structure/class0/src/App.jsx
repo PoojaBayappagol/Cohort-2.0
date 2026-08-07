@@ -1,7 +1,7 @@
 import React from "react";
 
 function abc() {
-  return React.createElement("h1", null, "Hello everyone");
+  return <h1>Hello Everyone. This is Pooja</h1>
 }
 
 export default abc;
