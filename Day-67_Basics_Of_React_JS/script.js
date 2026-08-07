@@ -7,4 +7,6 @@ var abc=document.querySelector('#container')
 
 var root=ReactDOM.createRoot(abc)
 
-root.render(pqr())
+var main=React.createElement('div',{id:'main'},[h1,pqr()])
+
+root.render(main)
