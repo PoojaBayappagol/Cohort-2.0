@@ -1,0 +1,44 @@
+*{
+  margin: 0;
+  padding: 0;
+  
+}
+
+html,body{
+  height: 100%;
+  width: 100%;
+  background-color: rgb(36, 36, 36);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.main{
+  padding: 30px;
+  
+}
+
+.main h1{
+  font-size: 80px;
+  width: 310px;
+  text-align: center;
+  border-radius: 20px;
+  margin-bottom: 10px;
+  background-color: beige;
+  color: black;
+}
+
+
+button{
+  padding: 20px;
+  font-size: 25px;
+  background-color: bisque;
+  border: none;
+  border-radius: 20px;
+  margin-left: 10px;
+}
+
+button:active{
+  scale: 0.95;
+}
