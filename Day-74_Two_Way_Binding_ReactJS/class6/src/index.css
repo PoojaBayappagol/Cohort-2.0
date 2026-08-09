@@ -1,0 +1,265 @@
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+body {
+  min-height: 100vh;
+
+  font-family: Arial, Helvetica, sans-serif;
+
+  background: #f8ded1;
+  color: #343a40;
+
+  padding: 50px 20px;
+}
+
+#root {
+  width: 100%;
+  max-width: 1000px;
+  margin: auto;
+}
+
+
+form {
+  display: flex;
+  align-items: center;
+
+  gap: 12px;
+
+  padding: 22px;
+
+  background: whitesmoke;
+
+  border: 4px solid #ffba85;
+  border-radius: 14px;
+
+  box-shadow:
+    0 0px 20px rgba(219, 179, 1, 0.3);
+}
+
+
+form input {
+  flex: 1;
+
+  min-width: 0;
+
+  padding: 14px 16px;
+
+  font-size: 15px;
+
+  color: #343a40;
+
+  background: whitesmoke;
+
+  border: 2px solid #b3b1b1;
+  border-radius: 9px;
+
+  outline: none;
+
+  transition:
+    border-color 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+
+form input::placeholder {
+  color: #99908a;
+}
+
+
+form input:focus {
+  border-color: #606c38;
+
+  box-shadow:
+    0 0 0 3px rgba(96, 108, 56, 0.12);
+}
+
+form button {
+  padding: 14px 26px;
+
+  border: none;
+  border-radius: 9px;
+
+  background: #bc6c25;
+  color: #fffdf9;
+
+  font-size: 15px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition:
+    background 0.25s ease,
+    transform 0.2s ease,
+    box-shadow 0.25s ease;
+}
+
+
+form button:hover {
+  background: #a85d1d;
+
+  box-shadow:
+    0 5px 15px rgba(188, 108, 37, 0.25);
+}
+
+
+form button:active {
+  transform: scale(0.97);
+}
+
+
+
+
+#root > div > div:not(form) {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+
+  margin-top: 15px;
+  padding: 18px 22px;
+
+  background: whitesmoke;
+
+  border: 1px solid #ded6d0;
+  border-radius: 14px;
+
+  box-shadow:
+    0 5px 18px rgba(52, 58, 64, 0.06);
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+
+#root > div > div:not(form):hover {
+  transform: translateY(-3px);
+
+  box-shadow:
+    0 10px 25px rgba(52, 58, 64, 0.11);
+}
+
+
+
+
+#root > div > div:not(form)::before {
+  content: "👤";
+
+  flex-shrink: 0;
+
+  width: 52px;
+  height: 52px;
+
+  margin-right: 22px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgb(110, 110, 110);
+
+  border-radius: 50%;
+
+  font-size: 25px;
+
+  box-shadow:
+    0 4px 10px rgba(96, 108, 56, 0.2);
+}
+
+
+/* =========================
+   NAME
+========================= */
+
+#root > div > div:not(form) h3 {
+  width: 25%;
+
+  color: #343a40;
+
+  font-size: 17px;
+  font-weight: 600;
+}
+
+
+/* =========================
+   EMAIL
+========================= */
+
+#root > div > div:not(form) p:nth-of-type(1) {
+  width: 40%;
+
+  color: #6c757d;
+
+  font-size: 14px;
+}
+
+
+/* =========================
+   PHONE
+========================= */
+
+#root > div > div:not(form) p:nth-of-type(2) {
+  width: 25%;
+
+  color: #606c38;
+
+  font-size: 14px;
+  font-weight: 500;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 700px) {
+
+  body {
+    padding: 25px 15px;
+  }
+
+
+  form {
+    flex-direction: column;
+    align-items: stretch;
+
+    padding: 18px;
+  }
+
+
+  form input,
+  form button {
+    width: 100%;
+  }
+
+
+  #root > div > div:not(form) {
+    flex-wrap: wrap;
+
+    padding: 16px;
+  }
+
+
+  #root > div > div:not(form)::before {
+    margin-right: 14px;
+  }
+
+
+  #root > div > div:not(form) h3 {
+    width: calc(100% - 70px);
+  }
+
+
+  #root > div > div:not(form) p:nth-of-type(1),
+  #root > div > div:not(form) p:nth-of-type(2) {
+    width: 100%;
+
+    padding-left: 66px;
+  }
+}
+
