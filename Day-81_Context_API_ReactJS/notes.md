@@ -1,7 +1,4 @@
 
-avatar
-Ask In Chat
-Ask In Chat
 ## Context API in React
 
 The **Context API** is a built-in React mechanism used to **share data globally** across components **without passing props manually at every level**.
@@ -263,4 +260,8 @@ function App() {
 | Best for parent-child | Best for global data |
 | Simple | Powerful |
 | No performance issue | Overuse can cause re-renders |
+
+
+
+
 Displaying Day 81 Notes.md.
