@@ -1,7 +1,4 @@
 
-avatar
-Ask In Chat
-Ask In Chat
 ## . `useNavigate()`
 
 **What:** Hook used to **navigate programmatically** (via JavaScript, not clicks).
