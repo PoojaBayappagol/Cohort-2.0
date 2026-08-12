@@ -1,7 +1,4 @@
 
-avatar
-Ask In Chat
-Ask In Chat
 1. CSR – Client Side Rendering
 
 **Client Side Rendering (CSR)** is a rendering approach where the **browser (client)** is responsible for rendering the UI.
