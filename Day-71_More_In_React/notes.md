@@ -1,7 +1,4 @@
 
-avatar
-Ask In Chat
-Ask In Chat
 # React Props: Passing Data to Components
 
 Props are read-only inputs passed from parent to child.
@@ -131,9 +128,6 @@ function Card({ bgColor, textColor }) {
 ```
 
 
-avatar
-Ask In Chat
-Ask In Chat
 # Design Inspirations for Next Task
 
 1. https://in.pinterest.com/pin/29906785021400572/
