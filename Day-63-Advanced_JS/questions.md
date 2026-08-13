@@ -1,7 +1,4 @@
 
-avatar
-Ask In Chat
-Ask In Chat
 # Day 63 — Project Scenarios
 
 API example (OpenWeatherMap):
