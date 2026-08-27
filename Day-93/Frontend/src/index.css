@@ -1,0 +1,54 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+html,body{
+  height: 100%;
+  width: 100%;
+  background-color: black;
+  color: white;
+  
+}
+
+.create-note-form{
+  padding: 10px;
+}
+
+input{
+  margin-right: 20px;
+  padding: 10px;
+  width: 280px;
+  border: 2px solid white;
+  border-radius: 10px;
+}
+
+button{
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+}
+
+button:active{
+  scale: 0.95;
+}
+
+.notes{
+  padding: 10px;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+
+}
+.note{
+  padding: 20px;
+  border-radius: 10px;
+  height: 80px;
+  background-color: rgb(87, 87, 87);
+  color: white;
+  display:flex;
+  flex-direction: column;
+  gap: 6px;
+}
