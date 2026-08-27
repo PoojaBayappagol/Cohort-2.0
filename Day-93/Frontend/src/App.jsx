@@ -33,13 +33,15 @@ function App() {
       description:description.value
     })
 
-    e.target.reset()
+    
     
     .then((res)=>{
       console.log(res.data)
 
       fetchNotes()
     })
+
+    e.target.reset()
 
 
   }
