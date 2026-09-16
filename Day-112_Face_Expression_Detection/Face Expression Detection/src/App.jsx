@@ -1,8 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import {
-  FaceLandmarker,
-  FilesetResolver,
-} from "@mediapipe/tasks-vision";
+import { FaceLandmarker, FilesetResolver } from "@mediapipe/tasks-vision";
 
 export default function FaceExpression() {
   const videoRef = useRef(null);
@@ -15,46 +12,36 @@ export default function FaceExpression() {
     let stream;
 
     const init = async () => {
-      try {
-        // Load MediaPipe vision files
-        const vision = await FilesetResolver.forVisionTasks(
-          "https://cdn.jsdelivr.net/npm/@mediapipe/tasks-vision@latest/wasm"
-        );
+      const vision = await FilesetResolver.forVisionTasks(
+        "https://cdn.jsdelivr.net/npm/@mediapipe/tasks-vision@latest/wasm"
+      );
 
-        // Create Face Landmarker
-        landmarkerRef.current = await FaceLandmarker.createFromOptions(
-          vision,
-          {
-            baseOptions: {
-              modelAssetPath:
-                "https://storage.googleapis.com/mediapipe-models/face_landmarker/face_landmarker/float16/1/face_landmarker.task",
-            },
+      landmarkerRef.current = await FaceLandmarker.createFromOptions(
+        vision,
+        {
+          baseOptions: {
+            modelAssetPath:
+              "https://storage.googleapis.com/mediapipe-models/face_landmarker/face_landmarker/float16/1/face_landmarker.task",
+          },
+          outputFaceBlendshapes: true,
+          runningMode: "VIDEO",
+          numFaces: 1,
+        }
+      );
 
-            outputFaceBlendshapes: true,
-            runningMode: "VIDEO",
-            numFaces: 1,
-          }
-        );
+      stream = await navigator.mediaDevices.getUserMedia({
+        video: true,
+      });
 
-        // Access webcam
-        stream = await navigator.mediaDevices.getUserMedia({
-          video: true,
-        });
+      videoRef.current.srcObject = stream;
 
-        videoRef.current.srcObject = stream;
+      await videoRef.current.play();
 
-        await videoRef.current.play();
-
-        detect();
-      } catch (error) {
-        console.error("Face detection error:", error);
-      }
+      detect();
     };
 
     const detect = () => {
-      if (!landmarkerRef.current || !videoRef.current) {
-        return;
-      }
+      if (!landmarkerRef.current || !videoRef.current) return;
 
       const results = landmarkerRef.current.detectForVideo(
         videoRef.current,
@@ -62,34 +49,29 @@ export default function FaceExpression() {
       );
 
       if (results.faceBlendshapes?.length > 0) {
-        const blendshapes =
-          results.faceBlendshapes[0].categories;
+        const blendshapes = results.faceBlendshapes[0].categories;
 
-        const getScore = (name) => {
-          return (
-            blendshapes.find(
-              (b) => b.categoryName === name
-            )?.score || 0
-          );
-        };
+        const getScore = (name) =>
+          blendshapes.find((b) => b.categoryName === name)?.score || 0;
 
         const smileLeft = getScore("mouthSmileLeft");
         const smileRight = getScore("mouthSmileRight");
-
         const jawOpen = getScore("jawOpen");
-
         const browUp = getScore("browInnerUp");
-
+        const browDown = getScore("browDownRight");
         const frownLeft = getScore("mouthFrownLeft");
         const frownRight = getScore("mouthFrownRight");
 
-        let currentExpression = "Neutral 😐";
+        
+  
 
-        if (smileLeft > 0.2 && smileRight > 0.2) {
+        let currentExpression = "Neutral";
+
+        if (smileLeft > 0.5 && smileRight > 0.5) {
           currentExpression = "Happy 😄";
         } else if (jawOpen > 0.6 && browUp > 0.5) {
           currentExpression = "Surprised 😲";
-        } else if (frownLeft > 0.5 && frownRight > 0.5) {
+        } else if (frownLeft > 0.004 || frownRight > 0.004 || browDown > 0.5) {
           currentExpression = "Sad 😢";
         }
 
@@ -101,7 +83,6 @@ export default function FaceExpression() {
 
     init();
 
-    // Cleanup
     return () => {
       if (animationRef.current) {
         cancelAnimationFrame(animationRef.current);
@@ -123,10 +104,7 @@ export default function FaceExpression() {
     <div style={{ textAlign: "center" }}>
       <video
         ref={videoRef}
-        style={{
-          width: "400px",
-          borderRadius: "12px",
-        }}
+        style={{ width: "400px", borderRadius: "12px" }}
         playsInline
       />
 
